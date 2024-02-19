@@ -2,6 +2,7 @@ import pandas as pd # Библиотека Pandas для работы с таб�
 import numpy as np # библиотека Numpy для операций линейной алгебры и прочего
 from sklearn.model_selection import train_test_split
 import os
+import requests
 
 # Это что бы все колоночки отображались
 pd.set_option('display.max_columns', None)

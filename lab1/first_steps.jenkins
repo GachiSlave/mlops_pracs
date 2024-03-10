@@ -1,4 +1,4 @@
-#!groovy
+hi#!groovy
 // Check ub1 properties
 properties([disableConcurrentBuilds()])
 
@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh student@127.0.0.1 -p 2222'
+                echo 'hello world'
             }
         }
     

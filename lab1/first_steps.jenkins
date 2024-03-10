@@ -8,7 +8,7 @@ pipeline {
                 // Get some code from a GitHub repository
 
                 // Run Maven on a Unix agent.
-                sh 'pip install -r lab1/requirements.txt'
+                sh 'pipeline.sh'
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
@@ -16,7 +16,7 @@ pipeline {
             }
             stage('hello'){
                 steps{
-                    sh 'python3 lab1/data_creation.py'
+                    //sh 'python3 lab1/data_creation.py'
                                         }
             }
         }

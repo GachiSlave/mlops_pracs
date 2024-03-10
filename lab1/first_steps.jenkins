@@ -12,6 +12,7 @@ pipeline {
                     sh 'cat requirements.txt'
                     sh 'cat pipeline.sh'
                     sh 'ls'
+                    sh 'data_creation.py'
                     sh 'pipeline.sh'
                 }
                 // To run Maven on a Windows agent, use

@@ -12,6 +12,7 @@ pipeline {
                 sh 'pwd'
                 sh  'whoami'
                 sh 'cd lab1'
+                sh 'ls'
                 sh 'pipeline.sh'
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"

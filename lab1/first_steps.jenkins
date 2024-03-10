@@ -8,15 +8,9 @@ pipeline {
                 // Get some code from a GitHub repository
 
                 // Run Maven on a Unix agent.
-                sh 'ls'
-                sh 'cd lab1'
-                sh 'ls'
-                sh 'cd lab1'
-                sh 'ls'
-                sh 'cd /'
-                sh 'ls'
-                sh 'ls'
-                sh 'pipeline.sh'
+                dir('lab1'){
+                    sh 'pipeline.sh'
+                }
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }

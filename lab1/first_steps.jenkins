@@ -8,6 +8,7 @@ pipeline {
                 // Get some code from a GitHub repository
 
                 // Run Maven on a Unix agent.
+                sh 'ls'
                 sh 'cd lab1'
                 sh 'pipeline.sh'
                 // To run Maven on a Windows agent, use

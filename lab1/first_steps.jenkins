@@ -3,14 +3,41 @@ pipeline {
 
 
     stages {
-        stage('Build_2') {
-            dir('lab1'){
+        stage('requirements') {
             steps {
-                
-                    sh 'ls'
-                    sh 'bash pipeline.sh'
-                }
+                dir('lab1'){
+                    sh 'pip install -r requirements.txt'
+                          }
             }
         }
+        stage('data_creation') {
+            steps {
+                dir('lab1'){
+                    sh 'python3 data_creation.py'
+                          }
+            }
+        }
+        stage('model_preparation') {
+            steps {
+                dir('lab1'){
+                    sh 'python3 model_preparation.py'
+                          }
+            }
+        }
+        stage('model_preprocessing') {
+            steps {
+                dir('lab1'){
+                    sh 'python3 model_preprocessing.py'
+                          }
+            }
+        }
+        stage('model_testing') {
+            steps {
+                dir('lab1'){
+                    sh 'python3 model_testing.py'
+                          }
+            }
+        }
+    
     }
 }

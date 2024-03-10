@@ -1,21 +1,23 @@
-#!groovy
-// Check ub1 properties
-properties([disableConcurrentBuilds()])
-
 pipeline {
-    agent { 
-        label 'main'
-        }
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-        timestamps()
-    }
+    agent any
+
+
     stages {
-        stage("First step") {
+        stage('Build') {
             steps {
-                echo 'hello world'
+                // Get some code from a GitHub repository
+
+                // Run Maven on a Unix agent.
+                sh 'python3 --version'
+                // To run Maven on a Windows agent, use
+                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+            }
+
+            }
+            stage('hello'){
+                steps{
+                    sh 'ls'
+                }
             }
         }
-    
     }
-}

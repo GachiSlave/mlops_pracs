@@ -4,16 +4,12 @@ pipeline {
 
     stages {
         stage('Build_2') {
+            dir('lab1'){
             steps {
-                // Get some code from a GitHub repository
-
-                // Run Maven on a Unix agent.
-                dir('lab1'){
+                
                     sh 'ls'
                     sh 'bash pipeline.sh'
                 }
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
             }
         }
     }

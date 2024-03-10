@@ -14,10 +14,5 @@ pipeline {
             }
 
             }
-            stage('hello'){
-                steps{
-                    //sh 'python3 lab1/data_creation.py'
-                                        }
-            }
         }
     }

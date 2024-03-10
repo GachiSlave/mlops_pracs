@@ -9,7 +9,12 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 sh 'ls'
-                sh 'sudo cd lab1'
+                sh 'cd lab1'
+                sh 'ls'
+                sh 'cd lab1'
+                sh 'ls'
+                sh 'cd /'
+                sh 'ls'
                 sh 'ls'
                 sh 'pipeline.sh'
                 // To run Maven on a Windows agent, use

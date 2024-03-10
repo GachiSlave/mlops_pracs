@@ -11,6 +11,7 @@ pipeline {
                 dir('lab1'){
                     sh 'cat requirements.txt'
                     sh 'cat pipeline.sh'
+                    sh 'ls'
                     sh 'pipeline.sh'
                 }
                 // To run Maven on a Windows agent, use

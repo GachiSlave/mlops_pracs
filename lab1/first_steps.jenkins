@@ -9,6 +9,7 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 dir('lab1'){
+                    sh 'ls'
                     sh 'pipeline.sh'
                 }
                 // To run Maven on a Windows agent, use

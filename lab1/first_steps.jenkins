@@ -9,11 +9,8 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 dir('lab1'){
-                    sh 'cat requirements.txt'
-                    sh 'cat pipeline.sh'
                     sh 'ls'
-                    sh 'data_creation.py'
-                    sh 'pipeline.sh'
+                    sh 'bash pipeline.sh'
                 }
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"

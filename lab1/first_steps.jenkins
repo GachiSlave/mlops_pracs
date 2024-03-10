@@ -16,7 +16,10 @@ pipeline {
             }
             stage('hello'){
                 steps{
-                    sh 'ls'
+                    sh 'python3 data_creation.py'
+                        
+
+'
                 }
             }
         }

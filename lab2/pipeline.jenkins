@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+    stages {
+        stage ("get_requirements") {
+            steps {
+                pip install -r requirements.txt
+            }
+        }
+        stage ("data_creation") {
+            steps {
+                python3 data_creation.py
+            }
+        }
+        stage ("model_preprocessing") {
+            steps {
+                python3 model_preprocessing.py
+            }
+        }
+        stage ("model_preparation") {
+            steps {
+                python3 model_preparation.py
+            }
+        stage ("model_testing") {
+            steps {
+                python3 model_testing.py
+            }
+        }
+    }
+}

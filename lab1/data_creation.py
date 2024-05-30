@@ -2,19 +2,12 @@ import pandas as pd # Библиотека Pandas для работы с таб�
 import numpy as np # библиотека Numpy для операций линейной алгебры и прочего
 from sklearn.model_selection import train_test_split
 import os
-import requests
 
 # Это что бы все колоночки отображались
 pd.set_option('display.max_columns', None)
 
-url = 'https://raw.githubusercontent.com/DanilaAkh/mlops_pracs/main/lab1/heart.csv'
-response = requests.get(url)
-
-with open('data.csv', 'wb') as file:
-    file.write(response.content)
-
 # Взял от сюда https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction
-df = pd.read_csv('data.csv')
+df = pd.read_csv('heart.csv')
 # print(df)
 # print(df.info())
 

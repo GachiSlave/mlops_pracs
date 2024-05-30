@@ -13,7 +13,6 @@ model = LogisticRegression(random_state=42).fit(X_train, y_train)
 
 pkl_filename = "pickle_model.pkl"
 
-os.chdir('../')
 # Код отсюда https://rukovodstvo.net/posts/id_1322/
 with open(pkl_filename, 'wb') as file:
     pickle.dump(model, file)

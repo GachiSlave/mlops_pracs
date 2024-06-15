@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+    stages {
+        stage('requirements') {
+            steps {
+                dir('lab2'){
+                    sh 'pip install -r requirements.txt'
+                }
+            }
+        }
+        stage('data_creation') {
+            steps {
+                dir('lab2'){
+                    sh 'python3 data_creation.py'
+                }
+            }
+        }
+        stage('model_preparation') {
+            steps {
+                dir('lab2'){
+                    sh 'python3 model_preparation.py'
+                }
+            }
+        }
+        stage('model_preprocessing') {
+            steps {
+                dir('lab2'){
+                    sh 'python3 model_preprocessing.py'
+                }
+            }
+        }
+        stage('model_testing') {
+            steps {
+                dir('lab2'){
+                    sh 'python3 model_testing.py'
+                }
+            }
+        }
+    
+    }
+}

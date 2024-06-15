@@ -1,0 +1,3 @@
+[submodule "sofg_eng"]
+	path = sofg_eng
+	url = git@github.com:GachiSlave/sofg_eng.git
